@@ -5,11 +5,11 @@ import 'package:emeron/features/home/core/bindings/home.binding.dart';
 import 'package:emeron/features/auth/presentation/pages/auth.page.dart';
 import 'package:emeron/features/home/presentation/pages/home.page.dart';
 import 'package:emeron/features/splash/core/bindings/splash.binding.dart';
-import 'package:emeron/features/calendar/presentation/pages/home.page.dart';
 import 'package:emeron/features/splash/presentation/pages/splash.page.dart';
 import 'package:emeron/features/calendar/core/bindings/calendar.binding.dart';
-import 'package:emeron/features/certificates/presentation/pages/home.page.dart';
+import 'package:emeron/features/calendar/presentation/pages/calendar.page.dart';
 import 'package:emeron/features/certificates/core/bindings/certificate.binding.dart';
+import 'package:emeron/features/certificates/presentation/pages/certificates.page.dart';
 
 class AppPages {
   static final pages = [
@@ -32,7 +32,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.certificates,
       page: () => CertificatePage(),
-      binding: CertificateBinding(),
+      binding: CertificatesBinding(),
     ),
   ];
 }

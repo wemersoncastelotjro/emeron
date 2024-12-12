@@ -7,49 +7,49 @@ class HomeController extends GetxController {
   List<MenuEntity> menuList = [
     MenuEntity(
       icon: Icons.calendar_month,
-      label: 'Calendário de Cursos',
+      label: 'course_calendar'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.edit,
-      label: 'Inscrições',
+      label: 'subscriptions'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.workspace_premium,
-      label: 'Certificados',
+      label: 'certificates'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.collections_bookmark,
-      label: 'Minha Biblioteca',
+      label: 'my_library'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.local_library,
-      label: 'Ambiente Virtual',
+      label: 'virtual_environment'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.language,
-      label: 'Emeron Web',
+      label: 'emeron_web'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.chat,
-      label: 'Fale Conosco',
+      label: 'talk_to_us'.tr,
       route: AppRoutes.calendar,
       external: false,
     ),
     MenuEntity(
       icon: Icons.admin_panel_settings,
-      label: 'Área Restrita',
+      label: 'restricted_area'.tr,
       route: AppRoutes.calendar,
       external: false,
     )

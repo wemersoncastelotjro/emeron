@@ -33,8 +33,8 @@ class HomePage extends GetView<HomeController> {
                         (menu) => GestureDetector(
                           onTap: () => Get.toNamed(menu.route),
                           child: Container(
-                            width: 125,
-                            height: 125,
+                            width: 135,
+                            height: 135,
                             padding: const EdgeInsets.symmetric(
                               horizontal: 16,
                               vertical: 8,

@@ -1,4 +1,7 @@
 PODS:
+  - connectivity_plus (0.0.1):
+    - Flutter
+    - FlutterMacOS
   - Flutter (1.0.0)
   - flutter_custom_tabs_ios (2.0.0):
     - Flutter
@@ -7,11 +10,14 @@ PODS:
     - FlutterMacOS
 
 DEPENDENCIES:
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/darwin`)
   - Flutter (from `Flutter`)
   - flutter_custom_tabs_ios (from `.symlinks/plugins/flutter_custom_tabs_ios/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
 
 EXTERNAL SOURCES:
+  connectivity_plus:
+    :path: ".symlinks/plugins/connectivity_plus/darwin"
   Flutter:
     :path: Flutter
   flutter_custom_tabs_ios:
@@ -20,6 +26,7 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
 
 SPEC CHECKSUMS:
+  connectivity_plus: 4c41c08fc6d7c91f63bc7aec70ffe3730b04f563
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
   flutter_custom_tabs_ios: a651b18786388923b62de8c0537607de87c2eccf
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
