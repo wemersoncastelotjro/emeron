@@ -22,52 +22,49 @@ class HomePage extends GetView<HomeController> {
                   margin: const EdgeInsets.only(bottom: 64),
                   child: Image.asset(AppImages.logo),
                 ),
-                Flexible(
-                  flex: 1,
-                  child: Wrap(
-                    alignment: WrapAlignment.center,
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    direction: Axis.horizontal,
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: controller.menuList
-                        .map(
-                          (menu) => GestureDetector(
-                            onTap: () => Get.toNamed(menu.route),
-                            child: Container(
-                              width: 125,
-                              height: 125,
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 16,
-                                vertical: 8,
-                              ),
-                              decoration: BoxDecoration(
-                                color: Colors.white.withOpacity(.25),
-                                borderRadius: BorderRadius.circular(19),
-                              ),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Icon(
-                                    menu.icon,
-                                    size: 48,
-                                    color: Colors.white,
-                                  ),
-                                  Text(
-                                    menu.label,
-                                    textAlign: TextAlign.center,
-                                    overflow: TextOverflow.clip,
-                                    style: GoogleFonts.roboto(
-                                        fontSize: 16, color: Colors.white, fontWeight: FontWeight.w700),
-                                  ),
-                                ],
-                              ),
+                Wrap(
+                  alignment: WrapAlignment.center,
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  direction: Axis.horizontal,
+                  spacing: 10,
+                  runSpacing: 10,
+                  children: controller.menuList
+                      .map(
+                        (menu) => GestureDetector(
+                          onTap: () => Get.toNamed(menu.route),
+                          child: Container(
+                            width: 125,
+                            height: 125,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 16,
+                              vertical: 8,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(.25),
+                              borderRadius: BorderRadius.circular(19),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  menu.icon,
+                                  size: 48,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  menu.label,
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.clip,
+                                  style: GoogleFonts.roboto(
+                                      fontSize: 16, color: Colors.white, fontWeight: FontWeight.w700),
+                                ),
+                              ],
                             ),
                           ),
-                        )
-                        .toList(),
-                  ),
+                        ),
+                      )
+                      .toList(),
                 ),
               ],
             ),
