@@ -18,7 +18,7 @@ class DefaultStack extends StatelessWidget {
           AppImages.bg,
           fit: BoxFit.fill,
         ),
-        child
+        SafeArea(child: child)
       ],
     );
   }

@@ -31,7 +31,17 @@ class HomePage extends GetView<HomeController> {
                   children: controller.menuList
                       .map(
                         (menu) => GestureDetector(
-                          onTap: () => Get.toNamed(menu.route),
+                          onTap: () => menu.external
+                              ? Get.showSnackbar(
+                                  const GetSnackBar(
+                                    titleText: Text('Rota Externa'),
+                                    messageText: Text('Essa rota vai para um browser'),
+                                    duration: Durations.extralong4,
+                                    backgroundColor: Colors.white,
+                                    snackPosition: SnackPosition.TOP,
+                                  ),
+                                )
+                              : Get.toNamed(menu.route),
                           child: Container(
                             width: 135,
                             height: 135,
