@@ -59,6 +59,38 @@ class AuthPage extends GetView<AuthController> {
                         onPressed: () => controller.obscureText.toggle(),
                       );
                     }),
+
+                    Container(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          const Text(
+                            'Recuperar Senha',
+                            style: TextStyle(fontSize: 18.0),
+                          ),
+                          StatefulBuilder(
+                            builder: (BuildContext context, StateSetter setState) {
+                              bool isSwitched = false;
+                              //Switch Button
+                              return Switch(
+                                value: isSwitched,
+                                onChanged: (value) {
+                                  setState(() {
+                                    isSwitched = value; // Alterna entre ligar/desligar
+                                  });
+                                },
+                                activeColor: Colors.blue,
+                              );
+                            },
+                          ),
+                        ],
+                      ),
+                    ),
+
+
+
+
                     Container(
                       margin: const EdgeInsets.symmetric(vertical: 16),
                       child: OutlinedButton(
