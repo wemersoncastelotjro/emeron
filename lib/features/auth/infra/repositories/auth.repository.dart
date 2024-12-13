@@ -27,8 +27,10 @@ class AuthRepositoryImpl implements IAuthRepository {
 
       return TokenMapper.fromDTO(userDTO);
     } on DatasourceException catch (e) {
+      print(e);
       throw ApiException(message: e.message);
     } catch (e) {
+      print(e);
       throw ApiException(message: 'login_failed_message'.tr);
     }
   }

@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:emeron/core/utils/constants/image.constants.dart';
 import 'package:emeron/core/utils/widgets/default_stack.widgets.dart';
 import 'package:emeron/features/home/presentation/controllers/home.controller.dart';
+import 'package:emeron/features/home/presentation/widgets/menu_item_list.widget.dart';
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
@@ -14,7 +15,7 @@ class HomePage extends GetView<HomeController> {
       body: DefaultStack(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 24),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -23,7 +24,7 @@ class HomePage extends GetView<HomeController> {
                   child: Image.asset(AppImages.logo),
                 ),
                 Wrap(
-                  alignment: WrapAlignment.center,
+                  alignment: WrapAlignment.start,
                   crossAxisAlignment: WrapCrossAlignment.center,
                   direction: Axis.horizontal,
                   spacing: 10,
@@ -42,36 +43,7 @@ class HomePage extends GetView<HomeController> {
                                   ),
                                 )
                               : Get.toNamed(menu.route),
-                          child: Container(
-                            width: 135,
-                            height: 135,
-                            padding: const EdgeInsets.symmetric(
-                              horizontal: 16,
-                              vertical: 8,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.white.withOpacity(.25),
-                              borderRadius: BorderRadius.circular(19),
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  menu.icon,
-                                  size: 48,
-                                  color: Colors.white,
-                                ),
-                                Text(
-                                  menu.label,
-                                  textAlign: TextAlign.center,
-                                  overflow: TextOverflow.clip,
-                                  style: GoogleFonts.roboto(
-                                      fontSize: 16, color: Colors.white, fontWeight: FontWeight.w700),
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: MenuItemListWidget(menu: menu),
                         ),
                       )
                       .toList(),

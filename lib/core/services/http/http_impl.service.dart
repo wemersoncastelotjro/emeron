@@ -8,7 +8,7 @@ class HttpServiceImpl extends GetxService implements IHttpService {
 
   @override
   Future<void> onInit() async {
-    _getConnect.baseUrl = 'YOUR_BASE_URL';
+    _getConnect.baseUrl = 'https://api-hmg.emeron.edu.br';
     _getConnect.timeout = const Duration(seconds: 30);
 
     _getConnect.httpClient.addRequestModifier<dynamic>((request) async {

@@ -7,4 +7,9 @@ final Map<String, String> ptBr = {
   'emeron_web': 'Emeron Web',
   'talk_to_us': 'Fale Conosco',
   'restricted_area': 'Área Restrita',
+  'login': 'Login',
+  'user': 'Usuário',
+  'password': 'Senha',
+  "required_cpf": "CPF é obrigatório",
+  "invalid_cpf": "CPF inválido",
 };

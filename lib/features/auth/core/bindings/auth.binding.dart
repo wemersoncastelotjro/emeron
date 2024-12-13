@@ -28,7 +28,6 @@ class AuthBinding extends Bindings {
 
     final IAuthenticateUserUseCase authenticateUserUseCase = AuthenticateUserUsecaseImpl(authRepository);
 
-
     Get.put(AuthController(authenticateUserUseCase));
   }
 }

@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'package:get/get.dart';
 import 'package:emeron/core/services/http/http.service.dart';
 import 'package:emeron/core/services/exceptions/api.exceptions.dart';
@@ -14,12 +15,17 @@ class AuthDataSourceImpl implements IAuthDatasource {
   Future<UserResponseDTO> signIn(SignInRequestDTO dto) async {
     try {
       final response = await _httpService.post(
-        '/login',
-        body: dto.toJson(),
+        'https://api-hmg.emeron.edu.br/users/login',
+        body: json.encode(dto.toJson()),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
       );
 
       return UserResponseDTO.fromJson(response.data);
     } catch (e) {
+      print(e);
       throw ApiException(message: 'login_failed_message'.tr);
     }
   }
